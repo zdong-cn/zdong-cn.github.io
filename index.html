@@ -152,6 +152,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tkinter学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/15/tkinter%E5%AD%A6%E4%B9%A0/">Markdown语法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/15/tkinter%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2020-04-15T06:17:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'hello'</span>)</span><br><span class="line">root = Tk()   <span class="comment">#初始化窗口</span></span><br><span class="line">root.title(<span class="string">'Tester'</span>)  <span class="comment">#顶层窗口名称</span></span><br><span class="line">root.geometry(<span class="string">"500x300"</span>)  <span class="comment">#设置窗口大小</span></span><br><span class="line">root.resizable(width=<span class="literal">True</span>,height=<span class="literal">True</span>) <span class="comment">#设置窗口是否可变，宽不可变，高可变，默认为True</span></span><br><span class="line"><span class="comment">#创建标签</span></span><br><span class="line">label = Label(root, text=<span class="string">'输入文字：'</span>, font=(<span class="string">'宋体'</span>,<span class="number">20</span>), bg=<span class="string">'white'</span>, width=<span class="number">10</span>, height=<span class="number">8</span>).grid(row=<span class="number">0</span>)</span><br><span class="line"><span class="comment">#创建输入框</span></span><br><span class="line">entry = Entry(root).grid(row=<span class="number">0</span>, column=<span class="number">1</span>) <span class="comment">#grid控制元件布局位置</span></span><br><span class="line"><span class="comment">#创建按钮,之前使用grid布局再用pack()就会报错,用过command参数可以在点击后调用函数</span></span><br><span class="line">button = Button(root, text=<span class="string">'按钮'</span>, command=hello).grid(row=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#列表框,fg前景色，bg背景色,grid需要放在最后</span></span><br><span class="line">a = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">listbox = Listbox(root, width=<span class="number">20</span>, height=<span class="number">22</span>, fg=<span class="string">'green'</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> a:</span><br><span class="line">    listbox.insert(<span class="string">'end'</span>, item)</span><br><span class="line">listbox.grid(row=<span class="number">1</span>, column=<span class="number">2</span>)</span><br><span class="line"><span class="comment">#滚动框,设置scr.configure(xscrollcommand=...)，sticky设置对其方式NSEW</span></span><br><span class="line">scr = Scrollbar(root, orient=HORIZONTAL, width=<span class="number">10</span>)</span><br><span class="line">entry_1 = Entry(root, xscrollcommand=scr.set)</span><br><span class="line">scr.configure(command=entry_1.xview) <span class="comment">#Entry和Scrollbar相互反馈</span></span><br><span class="line">scr.grid(row=<span class="number">2</span>, column=<span class="number">1</span>, sticky=EW)</span><br><span class="line">entry_1.grid(row=<span class="number">1</span>, column=<span class="number">1</span>, sticky=NS)</span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure>
+
+<img src="/2020/04/15/tkinter%E5%AD%A6%E4%B9%A0/res_1.JPG" width="251" height="350">
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tkinter</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/15/tkinter%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Markdown语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -344,6 +423,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">blog相关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">tkinter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
